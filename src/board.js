@@ -25,26 +25,6 @@ class Board extends React.Component {
     }
   }
 
-  // hasWon(symbol) {
-  //   const winningCombinations = [
-  //     [1, 2, 3],
-  //     [4, 5, 6],
-  //     [7, 8, 9],
-  //     [1, 4, 7],
-  //     [2, 5, 8],
-  //     [3, 6, 9],
-  //     [1, 5, 9],
-  //     [3, 5, 7]
-  //   ];
-  //   const cells = [];
-  //   this.state.board.forEach((cell, index) => {
-  //     if (cell == symbol) cells.push(index + 1);
-  //   });
-  //   return winningCombinations.some(combination =>
-  //     combination.every(cell => cells.includes(cell))
-  //   );
-  // }
-
   render() {
     const cells = this.state.board.map((cell, id) => {
       return (
@@ -55,11 +35,6 @@ class Board extends React.Component {
         />
       );
     });
-    // let message = `Next player ${this.currentSymbol}`;
-    // if (this.hasWon(this.currentSymbol)) {
-    //   message = `${this.currentSymbol} has won`;
-    // }
-    // this.currentSymbol = this.getCurrentSymbol();
     return <Display cells={cells} message={this.message} />;
   }
 
